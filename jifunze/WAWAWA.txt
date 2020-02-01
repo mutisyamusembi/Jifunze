@@ -1,0 +1,52 @@
+//    $resu = mysqli_fetch_array($res,MYSQLI_NUM);
+
+//          echo $stdid;
+          //
+
+
+//     $arrlength = count($resu);
+//      echo $arrlength;
+//          
+//      or($x = 0; $x < $arrlength; $x++) {
+//            
+//     $post_query="SELECT * FROM posts WHERE teach_id='$resu[x]'";
+//     $post_show=mysqli_query($db, $post_query);
+//            
+//        }
+//            foreach($res as $row){
+//             $data[] =$row;
+//             print_r($data);
+////             echo $data; 
+//            }
+
+<!--
+  echo $row['teacher_'];
+  echo "<br />";
+-->
+  
+//          $row = mysqli_fetch_array($res, MYSQLI_NUM);
+//          printf ("%s (%s)\n", $row[0], $row[1]);
+////// 
+
+    var_dump($rowcount);
+  $rowcount=mysqli_num_rows($res);
+
+
+
+
+$selector=$row['teacher'];
+     $get_post = "SELECT title, body FROM posts where teacher_id='$selector'";
+     $resul=mysqli_query($db,$get_post);
+            while ($rows = mysqli_fetch_array($resul)) { ?>
+		      <tr>
+			<td><?php echo $rows['title']; ?></td>
+			<td><?php echo $rows['body']; ?></td>
+			<td>
+				<a href="index.php?edit=<?php echo $rows['id']; ?>" class="edit_btn" >DELETE</a>
+			</td>
+		</tr>
+          }
+
+
+
+ width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false"
